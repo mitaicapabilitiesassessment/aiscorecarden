@@ -165,8 +165,10 @@ input:focus {
 }
 
 .option-item.row-layout {
-    flex-direction: row;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
 }
 
 .option-item:hover {

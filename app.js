@@ -354,8 +354,8 @@ function renderQuestion() {
                 const actualIndex = q.options.indexOf(opt);
                 return `
                     <div class="option-item row-layout ${selectedIndices.includes(actualIndex) ? 'selected' : ''}" onclick="toggleOption(${q.id}, ${actualIndex}, this)">
-                        <div style="margin-right: 15px;">${selectedIndices.includes(actualIndex) ? '✅' : '⬜'}</div>
-                        ${opt.text}
+                        <div style="flex-shrink: 0; margin-right: 15px; font-size: 1.2rem;">${selectedIndices.includes(actualIndex) ? '✅' : '⬜'}</div>
+                        <div style="flex: 1; line-height: 1.4;">${opt.text}</div>
                     </div>
                 `;
             }).join('')}
