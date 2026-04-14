@@ -1,6 +1,6 @@
 const CONFIG = {
     // Replace with your Google Apps Script Web App URL
-    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbz3n2T_1f-jAifp3-tInZp8Or2BdcDu-bHaGHApXtzM-521xQwvDI011mzGcH4uVdsX_g/exec',
+    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzzB5L3JcbyFBW-PaxtAnf_3m1N4cUU-5kG4TYueIc7zPGQBWnvo2iSaqiFJ3X4N_VFKA/exec',
     LEVELS: [
     { 
         min: 0, max: 10, name: 'AI Beginner', 
@@ -178,7 +178,7 @@ const QUESTIONS = [
             { text: "Gemini", points: 1 },
             { text: "DeepSeek", points: 1 },
             { text: "Copilot", points: 1 },
-            { text: "Perplexity", points: 1 },
+            { text: "Perplexity / NotebookLM", points: 1 },
             { text: "Midjourney / DALL-E 3", points: 1 },
             { text: "Runway / Descript", points: 1 },
             { text: "ElevenLabs / Suno", points: 1 },
