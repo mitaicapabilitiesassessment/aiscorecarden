@@ -1,6 +1,6 @@
 const CONFIG = {
     // Replace with your Google Apps Script Web App URL
-    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbz3n2T_1f-jAifp3-tInZp8Or2BdcDu-bHaGHApXtzM-521xQwvDI011mzGcH4uVdsX_g/exec',
+    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzzB5L3JcbyFBW-PaxtAnf_3m1N4cUU-5kG4TYueIc7zPGQBWnvo2iSaqiFJ3X4N_VFKA/exec',
     LEVELS: [
     { 
         min: 0, max: 10, name: 'AI Beginner', 
