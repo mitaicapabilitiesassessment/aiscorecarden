@@ -178,7 +178,7 @@ const QUESTIONS = [
             { text: "Gemini", points: 1 },
             { text: "DeepSeek", points: 1 },
             { text: "Copilot", points: 1 },
-            { text: "Perplexity / NotebookLM", points: 1 },
+            { text: "Perplexity / NotebookLM", points: 1 }, 
             { text: "Midjourney / DALL-E 3", points: 1 },
             { text: "Runway / Descript", points: 1 },
             { text: "ElevenLabs / Suno", points: 1 },
@@ -322,6 +322,7 @@ function renderQuestion() {
 
     let optionsHtml = '';
     const currentAnswer = state.answers[q.id];
+    const isAdvanced = q.group && q.group.includes("Group 5");
 
     if (q.type === 'single') {
         optionsHtml = `<div class="options-list">
@@ -371,22 +372,22 @@ function renderQuestion() {
     }
 
     if (q.hint) {
-        optionsHtml += `<div style="margin-top: 1.5rem; padding: 0.75rem 1rem; background: rgba(241, 110, 46, 0.1); border-left: 4px solid var(--primary-color); border-radius: 8px; font-size: 0.9rem; color: #EEE;">
+        optionsHtml += `<div class="hint-box ${isAdvanced ? 'advanced-hint' : ''}">
             ${q.hint}
         </div>`;
     }
 
     dom.main.innerHTML = `
         <div class="screen question-screen">
-            <div class="group-label" style="color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <div class="group-label ${isAdvanced ? 'advanced-label' : ''}">
                 ${q.group} (${state.currentQuestionIndex + 1}/${QUESTIONS.length})
             </div>
-            <div class="card">
+            <div class="card ${isAdvanced ? 'advanced-card' : ''}">
                 <h2>${q.text}</h2>
                 ${optionsHtml}
                 <div class="button-group">
                     <button class="btn" style="background: #333; color: white;" onclick="prevQuestion()">Back</button>
-                    <button class="btn btn-primary" onclick="nextQuestion()" ${currentAnswer === undefined || (q.type === 'multiple' && currentAnswer.length === 0) ? 'disabled' : ''}>${state.currentQuestionIndex === QUESTIONS.length - 1 ? 'Finish' : 'Next'}</button>
+                    <button class="btn ${isAdvanced ? 'btn-advanced' : 'btn-primary'}" onclick="nextQuestion()" ${currentAnswer === undefined || (q.type === 'multiple' && currentAnswer.length === 0) ? 'disabled' : ''}>${state.currentQuestionIndex === QUESTIONS.length - 1 ? 'Finish' : 'Next'}</button>
                 </div>
             </div>
         </div>
@@ -403,8 +404,8 @@ function selectOption(qId, value, element) {
     });
     element.classList.add('selected');
 
-    // Update the Next button state
-    const nextBtn = document.querySelector('.btn-primary');
+    // Update the Next button state (supports both btn-primary and btn-advanced)
+    const nextBtn = document.querySelector('.btn-primary, .btn-advanced');
     if (nextBtn) nextBtn.disabled = false;
 }
 
