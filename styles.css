@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
@@ -284,3 +284,77 @@ input:focus {
         padding: 1.5rem;
     }
 }
+
+/* Advanced Group 5 Styling */
+.group-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.group-label.advanced-label {
+    color: #a78bfa !important;
+}
+
+.card.advanced-card {
+    background: linear-gradient(135deg, rgba(88, 28, 135, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%) !important;
+    border: 1px solid rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 92, 246, 0.25) !important;
+}
+
+.card.advanced-card h2 {
+    background: linear-gradient(90deg, #FFFFFF, #a78bfa) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.card.advanced-card .option-item {
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.card.advanced-card .option-item:hover {
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.card.advanced-card .option-item.selected {
+    background: rgba(139, 92, 246, 0.25);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-advanced {
+    background: #8b5cf6;
+    color: white;
+}
+
+.btn-advanced:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-advanced:disabled {
+    background: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.hint-box {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #EEE;
+    background: rgba(241, 110, 46, 0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.hint-box.advanced-hint {
+    background: rgba(139, 92, 246, 0.1) !important;
+    border-left: 4px solid #8b5cf6 !important;
+}
+
+
