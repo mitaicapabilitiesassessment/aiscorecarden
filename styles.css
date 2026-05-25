@@ -1,11 +1,11 @@
 :root {
     --primary-color: #F16E2E;
     --primary-hover: #d95d1f;
-    --bg-dark: #1E1E1E; /* Slightly lighter background */
+    --bg-dark: #1E1E1E;
     --card-bg: rgba(255, 255, 255, 0.07);
     --text-main: #FFFFFF;
     --text-muted: #B0B0B0;
-    --border-radius: 23px; /* IZIon24 style */
+    --border-radius: 23px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -24,6 +24,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Đảm bảo Montserrat cho mọi thành phần văn bản */
+button, .btn, .btn-primary, .btn-advanced, input, input::placeholder, textarea, .option-item, .group-label, .hint-box, .level-badge, .score-value, .footer, .card, p, h1, h2, h3, label, .description {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
