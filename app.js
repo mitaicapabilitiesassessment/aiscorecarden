@@ -283,7 +283,7 @@ function renderInfoForm() {
                 </div>
                 <div class="form-group">
                     <label>Company Email</label>
-                    <input type="email" id="user-email" placeholder="example@izion24.com.vn" value="${state.user.email}">
+                    <input type="email" id="user-email" placeholder="example@mail.com.vn" value="${state.user.email}">
                 </div>
                 <div class="form-group">
                     <label>Position / Department</label>
