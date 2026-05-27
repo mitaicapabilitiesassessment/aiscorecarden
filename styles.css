@@ -17,7 +17,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-dark);
+    background-color: transparent; /* <- Thay đổi ở đây */
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -360,6 +360,25 @@ input:focus {
 .hint-box.advanced-hint {
     background: rgba(139, 92, 246, 0.1) !important;
     border-left: 4px solid #8b5cf6 !important;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2; /* Đẩy video xuống dưới cùng */
+}
+
+#bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 20, 30, 0.8); /* Độ mờ của nền tối, bạn có thể chỉnh 0.8 thành 0.5 nếu muốn video sáng hơn */
+    z-index: -1; /* Nằm ngay trên video và dưới nội dung chữ */
 }
 
 
